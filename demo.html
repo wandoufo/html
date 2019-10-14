@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html {
+      font-size: 62.5%;
+    }
+    * {
+      padding: 0;
+      margin: 0;
+      outline: none;
+      text-decoration: none;
+      font: 1.4rem/1.6rem "Microsoft YaHei";
+    }
+    body {
+      padding: 1.5rem;
+    }
+    button {
+      float: left;
+      padding: .5rem 1rem;
+      border: 0;
+      background: #9cf;
+      color: #fff;
+      margin-right: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="sendMessage('发送消息 1')">发送信息 1</button>
+  <button onclick="sendMessage('发送消息 2')">发送信息 2</button>
+  <button onclick="sendMessage('发送消息 3')">发送信息 3</button>
+</body>
+<script>
+  document.onload = function() {
+    function sendMessage(message) {
+      Share.postMessage(message);
+    }
+  }
+</script>
+</html>
